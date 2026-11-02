@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Make Maths Make Senses · @mathswithyusuf</title>
+  <title>Make Maths Make Sense · @mathswithyusuf</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -69,6 +69,8 @@
     .btn-gold:hover { background: var(--gold2); transform: translateY(-2px); }
     .btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 2px solid var(--gold); color: var(--gold); font-weight: 700; font-size: 1rem; padding: 13px 26px; border-radius: 8px; transition: background .2s, transform .15s; }
     .btn-outline:hover { background: rgba(201,162,39,.1); transform: translateY(-2px); }
+    .btn-amazon { display: inline-flex; align-items: center; gap: 8px; background: #FF9900; color: #111; font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: 8px; transition: background .2s, transform .15s; }
+    .btn-amazon:hover { background: #ffad33; transform: translateY(-2px); }
 
     .stats { background: var(--navy2); border-top: 3px solid var(--gold); border-bottom: 1px solid rgba(255,255,255,.07); padding: 36px max(20px, env(safe-area-inset-left, 0px)); }
     .stats-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
@@ -273,6 +275,9 @@
         <a class="btn-outline" href="https://mathswithyusuf.gumroad.com" target="_blank" rel="noopener">
           &#128218; Get the Study Pack
         </a>
+        <a class="btn-amazon" href="https://www.amazon.com/dp/B0HQ184NQS" target="_blank" rel="noopener">
+          🛒 Buy My Book on Amazon
+        </a>
       </div>
     </div>
   </section>
@@ -412,7 +417,6 @@
         <span class="resource-perk">&#10003; Laws of Exponents</span>
       </div>
 
-      <!-- Netlify form — no backend needed, Netlify handles submissions -->
       <form name="formula-sheet" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="resourceForm">
         <input type="hidden" name="form-name" value="formula-sheet" />
         <input type="hidden" name="bot-field" style="display:none" />
@@ -473,7 +477,6 @@
         </div>
 
         <div class="contact-form-wrap">
-          <!-- Netlify form — no backend needed -->
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" style="display:none" />
@@ -517,7 +520,6 @@
   </section>
 
   <script>
-    // Handle Netlify form submissions via fetch so the page doesn't reload
     function encode(data) {
       return Object.keys(data).map(k => encodeURIComponent(k) + '=' + encodeURIComponent(data[k])).join('&');
     }
